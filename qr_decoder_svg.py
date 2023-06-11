@@ -16,8 +16,6 @@ def qrcode_creating():
 root = Tk()
 folder_path = StringVar()
 root.title('QR Creator')
-photo = PhotoImage(file = "icon.png")
-root.iconphoto(False, photo)
 root.geometry('400x120')
 
 data_entry_label = Label(text='Enter text, from what you wanna made  qr code')
