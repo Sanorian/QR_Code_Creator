@@ -1,6 +1,5 @@
 import os
 import qrcode
-import qrcode.image.svg
 from tkinter import *
 from tkinter import filedialog
 def qrcode_creating():
@@ -9,13 +8,15 @@ def qrcode_creating():
     file_name = name_file_entry.get()
     os.chdir(path)
     data = data_entry.get()
-    img = qrcode.make(data, image_factory = qrcode.image.svg.SvgImage)
+    img = qrcode.make(data)
     type(img)
-    img.save(f"{file_name}.svg")
+    img.save(f"{file_name}.png")
 
 root = Tk()
 folder_path = StringVar()
 root.title('QR Creator')
+photo = PhotoImage(file = "icon.png")
+root.iconphoto(False, photo)
 root.geometry('400x120')
 
 data_entry_label = Label(text='Enter text, from what you wanna made  qr code')
