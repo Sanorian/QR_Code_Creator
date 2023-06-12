@@ -19,6 +19,7 @@ def qrcode_creating():
 root = Tk()
 root.title('QR Creator')
 root.geometry('400x120')
+root.resizable(width=False, height=False)
 
 data_entry_label = Label(text='Enter the text you want to make a qr code from')
 data_entry_label.place(x = 10, y = 5)
