@@ -17,3 +17,7 @@ sh qr_creator_png.sh
 ```
 sh qr_creator_svg.sh
 ```
+# Dependencies
+```
+pip install qrcode
+```
